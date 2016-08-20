@@ -22,14 +22,14 @@ defmodule ExConf.Mixfile do
     [
       mod: {ExConf, []},
       applications: [
-        :phoenix,
-        :phoenix_pubsub,
-        :phoenix_html,
         :cowboy,
         :logger,
         :gettext,
+        :phoenix,
         :phoenix_ecto,
-        :postgrex
+        :phoenix_html,
+        :phoenix_pubsub,
+        :postgrex,
       ]
     ]
   end
@@ -43,14 +43,14 @@ defmodule ExConf.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:cowboy, "~> 1.0"},
+      {:gettext, "~> 0.11"},
       {:phoenix, "~> 1.2.0"},
-      {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.0"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.6"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:phoenix_pubsub, "~> 1.0"},
+      {:postgrex, ">= 0.0.0"},
     ]
   end
 
@@ -62,8 +62,8 @@ defmodule ExConf.Mixfile do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
+      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "test": ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
   end
