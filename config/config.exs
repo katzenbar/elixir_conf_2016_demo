@@ -22,6 +22,9 @@ config :elixir_conf_2016_demo, ExConf.Endpoint,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
+  
+config :elixir_conf_2016_demo, Riot,
+  adapter: Riot.ApiAdapter
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

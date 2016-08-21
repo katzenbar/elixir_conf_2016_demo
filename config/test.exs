@@ -17,3 +17,6 @@ config :elixir_conf_2016_demo, ExConf.Repo,
   database: "elixir_conf_2016_demo_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :elixir_conf_2016_demo, Riot,
+  adapter: Riot.FakeAdapter
