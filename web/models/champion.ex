@@ -15,7 +15,7 @@ defmodule ExConf.Champion do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name, :title, :blurb, :key])
-    |> validate_required([:name, :title, :blurb, :key])
+    |> cast(params, [:id, :name, :title, :blurb, :key])
+    |> validate_required([:id, :name, :title, :blurb, :key])
   end
 end

@@ -22,6 +22,8 @@ defmodule ExConf.ModelCase do
       import Ecto.Changeset
       import Ecto.Query
       import ExConf.ModelCase
+
+      import ExConf.FactoryHelpers
     end
   end
 
