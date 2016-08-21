@@ -31,6 +31,7 @@ defmodule ExConf.Mixfile do
         :phoenix_html,
         :phoenix_pubsub,
         :postgrex,
+        :quantum,
       ]
     ]
   end
@@ -56,6 +57,7 @@ defmodule ExConf.Mixfile do
       {:phoenix_pubsub, "~> 1.0"},
       {:poison, "~> 2.0"},
       {:postgrex, ">= 0.0.0"},
+      {:quantum, ">= 1.7.1"},
     ]
   end
 

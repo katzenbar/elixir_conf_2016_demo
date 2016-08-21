@@ -26,6 +26,10 @@ config :logger, :console,
 config :elixir_conf_2016_demo, Riot,
   adapter: Riot.ApiAdapter
 
+config :quantum, cron: [
+  "@daily": {ExConf.ImportChampionsWorker, :run}
+]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
