@@ -2,10 +2,19 @@
   <div class="col-12">
     <h1>Champions</h1>
 
-    <%= for champion <- @champions do %>
-      <h2 class="qa-champion-<%= champion.key %>">
-        <%= champion.name %>
-      </h2>
-    <%= end %>
+    <ul class="list-group">
+      <%= for champion <- @champions do %>
+        <li class="list-group-item  qa-champion-<%= champion.key %>">
+          <h2>
+            <a class="qa-show" href="<%= champion_path(@conn, :show, champion) %>">
+              <%= champion.name %>
+            </a>
+          </h2>
+          <p>
+            <%= champion.blurb %>
+          </p>
+        </li>
+      <%= end %>
+    </ul>
   </div>
 </div>

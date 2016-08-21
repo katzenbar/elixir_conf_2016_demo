@@ -14,13 +14,10 @@ defmodule ExConf.Router do
   end
 
   scope "/", ExConf do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :browser
 
     get "/", PageController, :index
-  end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", ExConf do
-  #   pipe_through :api
-  # end
+    resources "/champions", ChampionController, only: [:show]
+  end
 end
