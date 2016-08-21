@@ -25,6 +25,7 @@ defmodule ExConf.Mixfile do
         :cowboy,
         :logger,
         :gettext,
+        :httpoison,
         :phoenix,
         :phoenix_ecto,
         :phoenix_html,
@@ -47,11 +48,13 @@ defmodule ExConf.Mixfile do
       {:ex_machina, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:hound, "~> 1.0", only: :test},
+      {:httpoison, "~> 0.9.0"},
       {:phoenix, "~> 1.2.0"},
       {:phoenix_ecto, "~> 3.0"},
       {:phoenix_html, "~> 2.6"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:phoenix_pubsub, "~> 1.0"},
+      {:poison, "~> 2.0"},
       {:postgrex, ">= 0.0.0"},
     ]
   end

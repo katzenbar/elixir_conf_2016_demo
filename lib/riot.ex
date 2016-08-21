@@ -4,7 +4,7 @@ defmodule Riot do
   def get_champions(options \\ {}) do
     options = %{
       data_by_id: true,
-      champ_data: "all"
+      champ_data: "blurb"
     }
 
     @config[:adapter].get_champions(options)
