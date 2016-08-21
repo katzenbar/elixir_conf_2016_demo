@@ -1,5 +1,11 @@
-<%= for champion <- @champions do %>
-  <h2 class="qa-champion-<%= champion.key %>">
-    <%= champion.name %>
-  </h2>
-<%= end %>
+<div class="row">
+  <div class="col-12">
+    <h1>Champions</h1>
+
+    <%= for champion <- @champions do %>
+      <h2 class="qa-champion-<%= champion.key %>">
+        <%= champion.name %>
+      </h2>
+    <%= end %>
+  </div>
+</div>
