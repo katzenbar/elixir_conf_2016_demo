@@ -12,4 +12,8 @@ defmodule ExConf.ChampionShowPage do
   def has_champion_name?(champion) do
     find_element(:class, "qa-name") |> visible_text == champion.name
   end
+
+  def has_skin?(skin) do
+    find_element(:class, "qa-skin-#{skin.id}")
+  end
 end

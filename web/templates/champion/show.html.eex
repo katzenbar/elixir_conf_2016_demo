@@ -1,1 +1,11 @@
 <h1 class="qa-name"><%= @champion.name %></h1>
+
+<h2>Skins</h2>
+<ul class="list-group">
+  <%= for skin <- @champion.skins do %>
+    <li class="list-group-item  qa-skin-<%= skin.id %>">
+      <h3><%= skin.name %></h3>
+      <img class="img-responsive" src="<%= skin_url(@champion, skin) %>">
+    </li>
+  <% end %>
+</ul>
