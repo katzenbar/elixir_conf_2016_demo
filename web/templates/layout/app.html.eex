@@ -12,6 +12,16 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="<%= page_path(@conn, :index) %>">
+            League of Elixir Conf
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
       <%= if get_flash(@conn, :info) do %>
         <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
