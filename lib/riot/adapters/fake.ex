@@ -1273,13 +1273,6 @@ defmodule Riot.FakeAdapter do
         #   }
         # ]
       },
-      %{
-        id: 15,
-        title: "the Battle Mistress",
-        name: "Sivir",
-        blurb: "''I don't care what face is on your coin, as long as it pays.''<br><br>Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won ...",
-        key: "Sivir"
-      }
     ]
   end
 end

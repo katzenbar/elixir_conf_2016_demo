@@ -7,6 +7,8 @@ defmodule ExConf.Champion do
     field :blurb, :string
     field :key, :string
 
+    has_many :skins, ExConf.Skin
+
     timestamps()
   end
 
@@ -17,5 +19,6 @@ defmodule ExConf.Champion do
     struct
     |> cast(params, [:id, :name, :title, :blurb, :key])
     |> validate_required([:id, :name, :title, :blurb, :key])
+    |> cast_assoc(:skins, required: true)
   end
 end

@@ -6,6 +6,7 @@ defmodule ExConf.Workers.ImportChampionsWorkerTest do
       ExConf.ImportChampionsWorker.run
 
       champions = Repo.all(ExConf.Champion)
+      |> Repo.preload(:skins)
 
       assert champions
 
@@ -14,9 +15,13 @@ defmodule ExConf.Workers.ImportChampionsWorkerTest do
       assert annie.name == "Annie"
       assert annie.blurb
 
-      sivir = champions |> Enum.at(1)
-      assert sivir
-      assert sivir.name == "Sivir"
+      skins = annie.skins
+      assert skins
+
+      goth_annie = Enum.find(skins, fn(skin) -> skin.name == "Goth Annie" end)
+      assert goth_annie
+      assert goth_annie.id == 1001
+      assert goth_annie.num == 1
     end
   end
 end
