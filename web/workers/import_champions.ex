@@ -6,9 +6,9 @@ defmodule ExConf.ImportChampionsWorker do
 
     Enum.each(champions, fn(champion_params) ->
       existing_record = Repo.get(Champion, champion_params.id)
-      |> Repo.preload(:skins)
 
       changeset = if existing_record do
+        existing_record = existing_record |> Repo.preload(:skins)
         Champion.changeset(existing_record, champion_params)
       else
         Champion.changeset(%Champion{}, champion_params)
