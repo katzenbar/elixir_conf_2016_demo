@@ -1,8 +1,8 @@
-defmodule ExConf.IndexPage do
+defmodule ExConf.ChampionIndexPage do
   use ExConf.PageHelpers
 
   def visit do
-    navigate_to "/"
+    navigate_to "/champions"
   end
 
   def view_champion(champion) do

@@ -1,13 +1,13 @@
 defmodule ExConf.Acceptance.ChampionsShowTest do
   use ExConf.AcceptanceCase
 
-  alias ExConf.{ChampionShowPage, IndexPage}
+  alias ExConf.{ChampionShowPage, ChampionIndexPage}
 
   test "navigating to a champion shows their details" do
     champion = insert(:champion)
 
-    IndexPage.visit
-    IndexPage.view_champion(champion)
+    ChampionIndexPage.visit
+    ChampionIndexPage.view_champion(champion)
 
     assert ChampionShowPage.current_page?(champion)
     assert ChampionShowPage.has_champion_name?(champion)
