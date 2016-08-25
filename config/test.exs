@@ -20,3 +20,5 @@ config :elixir_conf_2016_demo, ExConf.Repo,
 
 config :elixir_conf_2016_demo, Riot,
   adapter: Riot.FakeAdapter
+
+config :hound, browser: :chrome
