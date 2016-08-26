@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-12">
+    <h1>Versions</h1>
+
+    <ul class="list-group">
+      <%= for version <- @versions do %>
+        <li class="list-group-item  qa-version-<%= String.replace(version.id, ".", "-") %>">
+          <h2>
+            <%= version.id %>
+          </h2>
+        </li>
+      <%= end %>
+    </ul>
+  </div>
+</div>
