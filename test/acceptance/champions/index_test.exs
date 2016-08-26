@@ -1,4 +1,4 @@
-defmodule ExConf.Acceptance.IndexTest do
+defmodule ExConf.Acceptance.ChampionsIndexTest do
   use ExConf.AcceptanceCase
 
   alias ExConf.ChampionIndexPage
