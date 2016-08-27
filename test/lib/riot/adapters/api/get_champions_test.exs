@@ -1,4 +1,4 @@
-defmodule ExConf.Lib.Riot.Adapters.ApiTest do
+defmodule ExConf.Lib.Riot.Adapters.Api.GetChampionsTest do
   use ExUnit.Case
   @moduletag :integration
 

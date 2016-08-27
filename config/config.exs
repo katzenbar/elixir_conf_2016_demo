@@ -27,7 +27,8 @@ config :elixir_conf_2016_demo, Riot,
   adapter: Riot.ApiAdapter
 
 config :quantum, cron: [
-  "@daily": {ExConf.ImportChampionsWorker, :run}
+  "@daily": {ExConf.ImportChampionsWorker, :run},
+  "@daily": {ExConf.ImportVersionsWorker, :run},
 ]
 
 # Import environment specific config. This must remain at the bottom
