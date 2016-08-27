@@ -7,7 +7,7 @@ defmodule ExConf.Lib.Riot.Adapters.Api.GetItemsTest do
 
     assert items
 
-    shiv = Enum.find(items, fn(item) -> item.name == "Statikk Shiv" end)
+    shiv = Enum.find(items, fn(item) -> Map.get(item, :name) == "Statikk Shiv" end)
 
     assert shiv
     assert shiv.id == 3087
