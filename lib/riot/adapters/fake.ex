@@ -1276,6 +1276,67 @@ defmodule Riot.FakeAdapter do
     ]
   end
 
+  def get_items do
+    [
+      %{
+         tags: [
+            "AttackSpeed",
+            "CriticalStrike",
+            "NonbootsMovement",
+            "OnHit"
+         ],
+         id: 3087,
+         sanitizedDescription: "+35% Attack Speed +30% Critical Strike Chance +5% Movement Speed Passive: Moving and attacking will make an attack Energized. UNIQUE Passive - Shiv Lightning: Your Energized attacks deal 50~120 bonus magic damage (based on level) to up to 5 targets on hit (deals +120% bonus damage to minions and can critically strike).",
+         effect: %{
+            Effect8Amount: "1.2",
+            Effect3Amount: "5",
+            Effect7Amount: "5",
+            Effect6Amount: "120",
+            Effect4Amount: "750",
+            Effect5Amount: "50",
+            Effect2Amount: "80",
+            Effect1Amount: "100"
+         },
+         maps: %{
+            "10": true,
+            "1": false,
+            "8": true,
+            "14": false,
+            "11": true,
+            "12": true
+         },
+         plaintext: "Movement builds charges that release chain lightning on basic attack",
+         stats: %{
+            PercentAttackSpeedMod: 0.35,
+            PercentMovementSpeedMod: 0.05,
+            FlatCritChanceMod: 0.3
+         },
+         description: "<stats>+35% Attack Speed<br>+30% Critical Strike Chance<br>+5% Movement Speed<\/stats><br><br><passive>Passive:<\/passive> Moving and attacking will make an attack <a href='Energized'>Energized<\/a>.<br><br><unique>UNIQUE Passive - Shiv Lightning:<\/unique> Your Energized attacks deal 50~120 bonus magic damage (based on level) to up to 5 targets on hit (deals +120% bonus damage to minions and can critically strike).",
+         name: "Statikk Shiv",
+         image: %{
+            w: 48,
+            full: "3087.png",
+            sprite: "item1.png",
+            group: "item",
+            h: 48,
+            y: 48,
+            x: 432
+         },
+         gold: %{
+            total: 2600,
+            purchasable: true,
+            sell: 1820,
+            base: 550
+         },
+         from: [
+            "3086",
+            "2015"
+         ],
+         depth: 3
+      }
+    ]
+  end
+
   def get_versions do
     [
       "6.17.1",

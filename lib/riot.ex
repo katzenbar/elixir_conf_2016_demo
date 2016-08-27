@@ -10,6 +10,10 @@ defmodule Riot do
     @config[:adapter].get_champions(options)
   end
 
+  def get_items do
+    @config[:adapter].get_items
+  end
+
   def get_versions do
     @config[:adapter].get_versions
   end

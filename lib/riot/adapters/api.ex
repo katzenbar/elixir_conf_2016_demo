@@ -8,6 +8,13 @@ defmodule Riot.ApiAdapter do
     |> Enum.map(fn({_k, v}) -> v end)
   end
 
+  def get_items do
+    response = HTTPoison.get!("https://global.api.pvp.net/api/lol/static-data/na/v1.2/item?itemListData=all&api_key=#{@config[:api_key]}")
+
+    Poison.Parser.parse!(response.body, keys: :atoms).data
+    |> Enum.map(fn({_k, v}) -> v end)
+  end
+
   def get_versions do
     response = HTTPoison.get!("https://global.api.pvp.net/api/lol/static-data/na/v1.2/versions?api_key=#{@config[:api_key]}")
 
