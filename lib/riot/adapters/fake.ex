@@ -1337,6 +1337,41 @@ defmodule Riot.FakeAdapter do
     ]
   end
 
+  def get_masteries do
+    [
+      %{
+         ranks: 5,
+         id: 6211,
+         sanitizedDescription: [
+            "+0.4 Health per 5 seconds",
+            "+0.8 Health per 5 seconds",
+            "+1.2 Health per 5 seconds",
+            "+1.6 Health per 5 seconds",
+            "+2.0 Health per 5 seconds"
+         ],
+         description: [
+            "+0.4 Health per 5 seconds",
+            "+0.8 Health per 5 seconds",
+            "+1.2 Health per 5 seconds",
+            "+1.6 Health per 5 seconds",
+            "+2.0 Health per 5 seconds"
+         ],
+         name: "Recovery",
+         image: %{
+            w: 48,
+            full: "6211.png",
+            sprite: "mastery0.png",
+            group: "gray_mastery",
+            h: 48,
+            y: 96,
+            x: 384
+         },
+         prereq: "0",
+         masteryTree: "Resolve"
+      }
+    ]
+  end
+
   def get_versions do
     [
       "6.17.1",

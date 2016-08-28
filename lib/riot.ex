@@ -14,6 +14,10 @@ defmodule Riot do
     @config[:adapter].get_items
   end
 
+  def get_masteries do
+    @config[:adapter].get_masteries
+  end
+
   def get_versions do
     @config[:adapter].get_versions
   end
