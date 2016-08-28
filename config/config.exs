@@ -28,6 +28,7 @@ config :elixir_conf_2016_demo, Riot,
 
 config :quantum, cron: [
   "@daily": {ExConf.ImportChampionsWorker, :run},
+  "@daily": {ExConf.ImportMasteriesWorker, :run},
   "@daily": {ExConf.ImportVersionsWorker, :run},
 ]
 
