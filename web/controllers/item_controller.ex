@@ -6,4 +6,9 @@ defmodule ExConf.ItemController do
 
     render(conn, "index.html", items: items)
   end
+
+  def show(conn, %{"id" => id}) do
+    item = Repo.get(ExConf.Item, id)
+    render(conn, "show.html", item: item)
+  end
 end

@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="page-header">
+      <h1 class="qa-name">
+        <%= @item.name %>
+      </h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1">
+        <img src="<%= item_image_url(@item) %>">
+      </div>
+      <div class="col-md-11">
+        <p class="lead">
+          <%= @item.sanitized_description %>
+        </p>
+      </div>
+    </div>
+
+    <h2>Cost</h2>
+
+    <dl>
+      <dt>Total</dt>
+      <dd><%= @item.total_cost %></dd>
+
+      <dt>Base</dt>
+      <dd><%= @item.base_cost %></dd>
+
+      <dt>Sells for</dt>
+      <dd><%= @item.sell_cost %></dd>
+    </dl>
+  </div>
+</div>

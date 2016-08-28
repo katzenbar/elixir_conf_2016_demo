@@ -10,7 +10,9 @@
           </div>
           <div>
             <h2>
-              <%= item.name %>
+              <a class="qa-show" href="<%= item_path(@conn, :show, item) %>">
+                <%= item.name %>
+              </a>
             </h2>
             <p>
               <%= item.plaintext %>
