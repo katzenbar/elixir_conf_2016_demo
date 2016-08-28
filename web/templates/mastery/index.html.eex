@@ -13,7 +13,9 @@
           </div>
           <div>
             <h2>
-              <%= mastery.name %>
+              <a class="qa-show" href="<%= mastery_path(@conn, :show, mastery) %>">
+                <%= mastery.name %>
+              </a>
             </h2>
           </div>
         </li>
