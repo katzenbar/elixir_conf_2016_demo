@@ -19,6 +19,7 @@ defmodule ExConf.Router do
     get "/", PageController, :index
 
     resources "/champions", ChampionController, only: [:index, :show]
+    resources "/items", ItemController, only: [:index]
     resources "/versions", VersionController, only: [:index]
   end
 end

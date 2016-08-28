@@ -3,6 +3,9 @@
     <a href="<%= champion_path(@conn, :index) %>">Champions</a>
   </li>
   <li>
+    <a href="<%= item_path(@conn, :index) %>">Items</a>
+  </li>
+  <li>
     <a href="<%= version_path(@conn, :index) %>">Versions</a>
   </li>
 </ul>

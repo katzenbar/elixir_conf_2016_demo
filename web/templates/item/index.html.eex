@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-12">
+    <h1>Items</h1>
+
+    <ul class="list-group">
+      <%= for item <- @items do %>
+        <li class="list-group-item  qa-item-<%= item.id %>">
+          <h2>
+            <%= item.name %>
+          </h2>
+          <p>
+            <%= item.plaintext %>
+          </p>
+        </li>
+      <%= end %>
+    </ul>
+  </div>
+</div>
