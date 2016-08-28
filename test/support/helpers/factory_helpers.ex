@@ -3,6 +3,7 @@ defmodule ExConf.FactoryHelpers do
 
   use ExConf.Factory.Champion
   use ExConf.Factory.Item
+  use ExConf.Factory.Mastery
   use ExConf.Factory.Skin
   use ExConf.Factory.Version
 end

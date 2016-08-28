@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="page-header">
+      <h1>Masteries</h1>
+    </div>
+
+    <ul class="list-group">
+      <%= for mastery <- @masteries do %>
+        <li class="list-group-item  qa-mastery-<%= mastery.id %>" style="min-height:115px;">
+          <div class="pull-left" style="margin-top:12px;margin-right:20px;">
+            <img class="img-thumbnail" src="<%= mastery_image_url(mastery) %>">
+          </div>
+          <div>
+            <h2>
+              <%= mastery.name %>
+            </h2>
+          </div>
+        </li>
+      <%= end %>
+    </ul>
+
+  </div>
+</div>

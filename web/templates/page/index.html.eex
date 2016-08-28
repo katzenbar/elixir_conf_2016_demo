@@ -6,6 +6,9 @@
     <a href="<%= item_path(@conn, :index) %>">Items</a>
   </li>
   <li>
+    <a href="<%= mastery_path(@conn, :index) %>">Masteries</a>
+  </li>
+  <li>
     <a href="<%= version_path(@conn, :index) %>">Versions</a>
   </li>
 </ul>

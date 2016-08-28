@@ -20,6 +20,7 @@ defmodule ExConf.Router do
 
     resources "/champions", ChampionController, only: [:index, :show]
     resources "/items", ItemController, only: [:index, :show]
+    resources "/masteries", MasteryController, only: [:index]
     resources "/versions", VersionController, only: [:index]
   end
 end
