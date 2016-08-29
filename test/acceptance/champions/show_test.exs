@@ -1,5 +1,5 @@
 defmodule ExConf.Acceptance.ChampionsShowTest do
-  use ExConf.AcceptanceCase
+  use ExConf.AcceptanceCase, async: true
 
   alias ExConf.{ChampionShowPage, ChampionIndexPage}
 

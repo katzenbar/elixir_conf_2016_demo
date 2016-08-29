@@ -31,10 +31,14 @@ defmodule ExConf.AcceptanceCase do
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(ExConf.Repo)
 
-    unless tags[:async] do
+    if tags[:async] do
+      metadata = Phoenix.Ecto.SQL.Sandbox.metadata_for(ExConf.Repo, self())
+      Hound.start_session(metadata: metadata)
+    else
+      Hound.start_session
       Ecto.Adapters.SQL.Sandbox.mode(ExConf.Repo, {:shared, self()})
     end
 
-    {:ok, conn: Phoenix.ConnTest.build_conn()}
+    :ok
   end
 end

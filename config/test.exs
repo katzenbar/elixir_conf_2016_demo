@@ -9,6 +9,8 @@ config :elixir_conf_2016_demo, ExConf.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+config :elixir_conf_2016_demo, sql_sandbox: true
+
 # Configure your database
 config :elixir_conf_2016_demo, ExConf.Repo,
   adapter: Ecto.Adapters.Postgres,

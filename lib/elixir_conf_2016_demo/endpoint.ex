@@ -1,6 +1,10 @@
 defmodule ExConf.Endpoint do
   use Phoenix.Endpoint, otp_app: :elixir_conf_2016_demo
 
+  if Application.get_env(:elixir_conf_2016_demo, :sql_sandbox) do
+    plug Phoenix.Ecto.SQL.Sandbox
+  end
+
   socket "/socket", ExConf.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
