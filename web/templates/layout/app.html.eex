@@ -15,7 +15,7 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="<%= page_path(@conn, :index) %>">
+          <a class="navbar-brand" href="<%= home_path(@conn, :index) %>">
             League of Elixir Conf
           </a>
         </div>

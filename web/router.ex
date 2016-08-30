@@ -16,7 +16,7 @@ defmodule ExConf.Router do
   scope "/", ExConf do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", HomeController, :index
 
     resources "/champions", ChampionController, only: [:index, :show]
     resources "/items", ItemController, only: [:index, :show]
