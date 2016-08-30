@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-header">
+      <h1>Summoner Search Results</h1>
+    </div>
+
+    <h2 class="qa-summoner-<%= @summoner.id %>">
+      <%= @summoner.name %>
+    </h2>
+  </div>
+</div>

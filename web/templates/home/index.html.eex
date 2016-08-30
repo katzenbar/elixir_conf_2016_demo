@@ -1,14 +1,36 @@
-<ul>
-  <li>
-    <a href="<%= champion_path(@conn, :index) %>">Champions</a>
-  </li>
-  <li>
-    <a href="<%= item_path(@conn, :index) %>">Items</a>
-  </li>
-  <li>
-    <a href="<%= mastery_path(@conn, :index) %>">Masteries</a>
-  </li>
-  <li>
-    <a href="<%= version_path(@conn, :index) %>">Versions</a>
-  </li>
-</ul>
+<div class="row">
+
+  <div class="col-md-6">
+    <%= form_for @conn, summoner_path(@conn, :index), [method: :get, as: :summoner], fn(form) -> %>
+      <div class="form-group">
+        <label>
+          Search for summoner
+        </label>
+        <%= text_input form, :name, placeholder: "Summoner name", class: "form-control  qa-summoner-search-input" %>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-default  qa-summoner-search-submit">
+          Search
+        </button>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <ul>
+      <li>
+        <a href="<%= champion_path(@conn, :index) %>">Champions</a>
+      </li>
+      <li>
+        <a href="<%= item_path(@conn, :index) %>">Items</a>
+      </li>
+      <li>
+        <a href="<%= mastery_path(@conn, :index) %>">Masteries</a>
+      </li>
+      <li>
+        <a href="<%= version_path(@conn, :index) %>">Versions</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
