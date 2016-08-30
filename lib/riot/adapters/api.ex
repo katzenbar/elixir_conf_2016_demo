@@ -22,6 +22,14 @@ defmodule Riot.ApiAdapter do
     |> Enum.map(fn({_k, v}) -> v end)
   end
 
+  def get_summoner_by_name(name) do
+    response = HTTPoison.get!("https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/#{name}?api_key=#{@config[:api_key]}")
+
+    {_key, value} = Poison.Parser.parse!(response.body, keys: :atoms)
+    |> Enum.at(0)
+
+    value
+  end
 
   def get_versions do
     response = HTTPoison.get!("https://global.api.pvp.net/api/lol/static-data/na/v1.2/versions?api_key=#{@config[:api_key]}")

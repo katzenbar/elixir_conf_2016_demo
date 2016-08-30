@@ -18,6 +18,10 @@ defmodule Riot do
     @config[:adapter].get_masteries
   end
 
+  def get_summoner_by_name(name) do
+    @config[:adapter].get_summoner_by_name(name)
+  end
+
   def get_versions do
     @config[:adapter].get_versions
   end

@@ -4,8 +4,19 @@
       <h1>Summoner Search Results</h1>
     </div>
 
-    <h2 class="qa-summoner-<%= @summoner.id %>">
-      <%= @summoner.name %>
-    </h2>
+    <div class="row">
+      <div class="col-md-2">
+        <img src="<%= profile_icon_url(@summoner) %>">
+      </div>
+      <div class="col-md-10">
+        <h2 class="qa-summoner-<%= @summoner.id %>">
+          <%= @summoner.name %>
+        </h2>
+        <p>
+          Level <%= @summoner.summoner_level %>
+        </p>
+      </div>
+    </div>
+
   </div>
 </div>
