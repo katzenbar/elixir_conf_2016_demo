@@ -29,10 +29,10 @@ defmodule ExConf.AcceptanceCase do
       defmacro assert_current_path(assertion) do
         quote do
           expected_path = unquote(assertion)
-          assert current_path == expected_path,
-            left: current_path,
-            right: expected_path,
-            message: "Incorrect path, expected \"#{current_path}\" to be \"#{expected_path}\""
+          assert(
+            current_path == expected_path,
+            "Incorrect path, expected \"#{current_path}\" to be \"#{expected_path}\""
+          )
         end
       end
     end
