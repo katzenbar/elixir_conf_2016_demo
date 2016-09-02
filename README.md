@@ -1,5 +1,9 @@
 # ExConf
 
+To setup application:
+
+  * Create `confg/riot.secret.exs` to include your Riot API key, see template for details
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
