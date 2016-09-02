@@ -2,7 +2,9 @@ defmodule ExConf.ChampionController do
   use ExConf.Web, :controller
 
   def index(conn, _params) do
-    champions = Repo.all(ExConf.Champion)
+    champions = ExConf.Champion
+    |> Ecto.Query.order_by(:name)
+    |> Repo.all
 
     render(conn, "index.html", champions: champions)
   end
