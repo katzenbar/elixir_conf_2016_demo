@@ -2,7 +2,9 @@ defmodule ExConf.ItemController do
   use ExConf.Web, :controller
 
   def index(conn, _params) do
-    items = Repo.all(ExConf.Item)
+    items = ExConf.Item
+    |> Ecto.Query.order_by(:name)
+    |> Repo.all
 
     render(conn, "index.html", items: items)
   end
