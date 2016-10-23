@@ -2,7 +2,7 @@
 
 To setup application:
 
-  * Create `confg/riot.secret.exs` to include your Riot API key, see template for details
+  * Create `config/riot.secret.exs` to include your Riot API key, see template for details
 
 To start your Phoenix app:
 
